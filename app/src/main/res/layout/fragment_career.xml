@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/hdr"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#000000">
+
+            <TextView
+                android:id="@+id/txt_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="false"
+                android:fontFamily="sans-serif"
+
+                android:text="Technical Proficencies"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_nomencl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_role"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="false"
+                android:fontFamily="sans-serif"
+                android:text="Dennis Vincent"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cnt_return"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hdr"
+            android:background="#646464">
+
+            <ImageButton
+                android:id="@+id/img_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#64A020"
+                android:onClick="get_prim"
+                android:src="@android:drawable/ic_menu_revert" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cnt_return">
+
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#646464"
+                android:paddingBottom="80dp"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:scrollbars="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_hist_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="13dp">
+
+                        <TextView
+                            android:id="@+id/ed_hist_hdr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Code Languages"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ed_hist_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ed_hist_hdr"
+                            android:text="C#, C++, Visual Basic, Java, ASP.net, Pascal"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_goal_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ed_hist_prim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="13dp">
+
+                        <TextView
+                            android:id="@+id/ed_goal_hdr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Database Technologies"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ed_goal_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ed_goal_hdr"
+                            android:text="MS SQL Server, MySQL, Oracle, SQLite"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_career_bg_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ed_goal_prim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:layout_marginBottom="13dp">
+
+                        <RelativeLayout
+                            android:id="@+id/career_bg_hdr_prim"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/career_bg_hdr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Technology Realms"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+
+                                />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/career_bg_content1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_hdr_prim"
+                            android:text="Desktop tools, Web based tools, API utilization, Prototypes"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

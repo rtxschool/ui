@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/hdr"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#000000">
+
+            <TextView
+                android:id="@+id/txt_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="false"
+                android:fontFamily="sans-serif"
+
+                android:text="Application Developer"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_nomencl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_role"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="false"
+                android:fontFamily="sans-serif"
+                android:text="Dennis Vincent"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/hdr">
+
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#646464"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:scrollbars="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_hist_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="13dp">
+
+                        <TextView
+                            android:id="@+id/ed_hist_hdr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Education History"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ed_hist_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ed_hist_hdr"
+                            android:text="AAS | Engineeer"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_goal_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ed_hist_prim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="13dp">
+
+                        <TextView
+                            android:id="@+id/ed_goal_hdr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Education Goal"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ed_goal_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ed_goal_hdr"
+                            android:text="BSAT | Application Development"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_career_bg_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ed_goal_prim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:layout_marginBottom="13dp">
+
+                        <RelativeLayout
+                            android:id="@+id/career_bg_hdr_prim"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/career_bg_hdr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Career Summary"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+
+                                />
+
+                            <ImageButton
+                                android:id="@+id/button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/career_bg_hdr"
+                                android:background="#64A020"
+                                android:onClick="get_career"
+                                android:src="@android:drawable/ic_menu_info_details"
+                                android:translationX="22dp" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/career_bg_content1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_hdr_prim"
+                            android:text="Application Development"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content_y_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content1"
+                            android:text="        22 years"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content_y_1"
+                            android:text="College I.S. Teacher"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content_y_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content2"
+                            android:text="        6 years"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content_y_2"
+                            android:text="College Eng Tech Teacher"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content_y_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content4"
+                            android:text="        2 years"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content_y_4"
+                            android:text="Engineer Technologist"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/career_bg_content_y_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/career_bg_content6"
+                            android:text="        2 years"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

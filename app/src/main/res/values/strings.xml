@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Utility
+    </string>
+    <string name = "str_each"
+        >
+        Each
+    </string>
+    <string name = "str_box"
+        >
+        box
+    </string>
+    <string name = "str_is"
+        >
+        is
+    </string>
+    <string name = "str_unique"
+        >
+        unique
+    </string>
+    <string name = "str_log"
+        >
+        Log On
+    </string>
+    <string name = "str_your"
+        >
+        Your User
+    </string>
+    <string name = "topic"
+        >
+        Application Development 340
+    </string>
+    <string name = "sub_topic"
+        >
+        UI Layouts
+    </string>
+</resources>

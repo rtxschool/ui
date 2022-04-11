@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/hdr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/txt_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="false"
+                android:fontFamily="sans-serif"
+
+                android:text="@string/topic"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_nomencl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_role"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="false"
+                android:fontFamily="sans-serif"
+                android:text="@string/sub_topic"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/hdr">
+
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#646464"
+                android:paddingBottom="28dp"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:scrollbars="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/log_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/ed_career_bg_prim"
+                        android:stretchColumns="0">
+
+                        <TableRow
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/txt_log"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="18dp"
+                                android:hint="@string/str_your"
+                                android:inputType="textShortMessage"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_log"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="18dp"
+                                android:backgroundTint="#C8C8C8"
+                                android:onClick="verify_client"
+                                android:text="@string/str_log"
+                                app:cornerRadius="4dp" />
+
+                        </TableRow>
+                    </TableLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ed_goal_prim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_prim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B4B4B4"
+                    app:cardBackgroundColor="#505050"
+                    app:cardCornerRadius="8dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/ed_career_bg_prim"
+                        android:stretchColumns="0,1">
+
+                        <TableRow
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/cmd_unique1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="#C8C8C8"
+                                android:onClick="toast_unique_box"
+                                android:text="@string/str_each"
+                                app:cornerRadius="4dp" />
+
+                            <Button
+                                android:id="@+id/cmd_unique2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="#C8C8C8"
+                                android:onClick="toast_unique_box"
+                                android:text="@string/str_box"
+                                app:cornerRadius="4dp" />
+
+                            <Space
+                                android:layout_width="8dp"
+                                android:layout_height="wrap_content" />
+                        </TableRow>
+
+                        <TableRow
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/cmd_unique4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="#C8C8C8"
+                                android:onClick="toast_unique_box"
+                                android:text="@string/str_is"
+                                app:cornerRadius="4dp" />
+
+                            <Button
+                                android:id="@+id/cmd_unique8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="#C8C8C8"
+                                android:onClick="toast_unique_box"
+                                android:text="@string/str_unique"
+                                app:cornerRadius="4dp" />
+
+                        </TableRow>
+                    </TableLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
